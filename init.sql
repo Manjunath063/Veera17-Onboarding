@@ -1,4 +1,8 @@
-CREATE TABLE onboarding_records (
+async function createTable() {
+  try {
+    await pool.query(`
+
+      CREATE TABLE onboarding_records (
         id SERIAL PRIMARY KEY,
         emp_id VARCHAR(7) UNIQUE,
         full_name VARCHAR(50) NOT NULL,
@@ -47,3 +51,10 @@ CREATE TABLE onboarding_records (
         created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP WITH TIME ZONE
       );
+    `);
+    console.log('Table onboarding_records dropped and recreated successfully');
+  } catch (error) {
+    console.error('Error creating table:', error.message);
+    process.exit(1);
+  }
+}
