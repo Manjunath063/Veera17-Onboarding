@@ -423,5 +423,5 @@ function getMimeType(fileName) {
 
 const PORT = process.env.PORT || 3070;
 app.listen(PORT, () => {
-  console.log(`Server running on http://56.228.36.89:${PORT}`);
+  console.log(`Server running on http://16.171.226.132:${PORT}`);
 });
