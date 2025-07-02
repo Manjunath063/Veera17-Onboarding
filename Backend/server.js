@@ -22,7 +22,7 @@ async function createTable() {
   try {
     await pool.query(`
 
-      CREATE TABLE onboarding_records (
+      CREATE TABLE IF NOT EXISTS onboarding_records (
         id SERIAL PRIMARY KEY,
         emp_id VARCHAR(7) UNIQUE,
         full_name VARCHAR(50) NOT NULL,
@@ -423,5 +423,10 @@ function getMimeType(fileName) {
 
 const PORT = process.env.PORT || 3070;
 app.listen(PORT, () => {
+<<<<<<< HEAD
   console.log(`Server running on http://16.171.226.132:${PORT}`);
 });
+=======
+  console.log(`Server running on http://56.228.36.89:${PORT}`);
+});
+>>>>>>> aac9373fb9ffce655be98f62fffec643f1c18c13
