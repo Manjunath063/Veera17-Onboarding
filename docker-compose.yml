@@ -32,7 +32,7 @@ services:
     build: ./Frontend
     container_name: frontend_onboarding178
     ports:
-      - "8127:80"
+      - "8142:80"
     depends_on:
       - backend
 
@@ -40,7 +40,7 @@ services:
     build: ./HR
     container_name: hr_onboarding178
     ports:
-      - "8128:80"
+      - "8143:80"
     depends_on:
       - backend
 
@@ -48,7 +48,7 @@ services:
     build: ./Staff
     container_name: staff_onboarding178
     ports:
-      - "8129:80"
+      - "8144:80"
     depends_on:
       - backend
 
