@@ -2,7 +2,7 @@ async function createTable() {
   try {
     await pool.query(`
 
-      CREATE TABLE IF NOT EXISTS onboarding_records (
+      CREATE TABLE onboarding_records (
         id SERIAL PRIMARY KEY,
         emp_id VARCHAR(7) UNIQUE,
         full_name VARCHAR(50) NOT NULL,
@@ -57,4 +57,4 @@ async function createTable() {
     console.error('Error creating table:', error.message);
     process.exit(1);
   }
-
+}
