@@ -57,8 +57,4 @@ async function createTable() {
     console.error('Error creating table:', error.message);
     process.exit(1);
   }
-<<<<<<< Updated upstream
-}
-=======
-}
->>>>>>> Stashed changes
+
